@@ -1,0 +1,185 @@
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py A(2).csv 
+Press Ctrl+C to exit
+2019-02-20 17:56:44.650653 Start FindDupsCSV Ver. 1
+Reading: A(2).csv, Writing: A(3).csv
+
+2019-02-20 17:57:51.013372 Finished in 0:01:06.362719, Processed file: A(2).csv, Records Saved: 28921, Duplicate Records: 1195
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py B(2).csv 
+Press Ctrl+C to exit
+2019-02-20 17:57:51.247372 Start FindDupsCSV Ver. 1
+Reading: B(2).csv, Writing: B(3).csv
+
+2019-02-20 18:00:13.146627 Finished in 0:02:21.899255, Processed file: B(2).csv, Records Saved: 41024, Duplicate Records: 1799
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py C(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:00:13.365027 Start FindDupsCSV Ver. 1
+Reading: C(2).csv, Writing: C(3).csv
+
+2019-02-20 18:01:41.115582 Finished in 0:01:27.750555, Processed file: C(2).csv, Records Saved: 33305, Duplicate Records: 1378
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py D(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:01:41.333983 Start FindDupsCSV Ver. 1
+Reading: D(2).csv, Writing: D(3).csv
+
+2019-02-20 18:02:55.171913 Finished in 0:01:13.837930, Processed file: D(2).csv, Records Saved: 30458, Duplicate Records: 1224
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py E(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:02:55.421513 Start FindDupsCSV Ver. 1
+Reading: E(2).csv, Writing: E(3).csv
+
+2019-02-20 18:03:27.495169 Finished in 0:00:32.073656, Processed file: E(2).csv, Records Saved: 20132, Duplicate Records: 856
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py F(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:03:27.729170 Start FindDupsCSV Ver. 1
+Reading: F(2).csv, Writing: F(3).csv
+
+2019-02-20 18:03:58.373025 Finished in 0:00:30.643855, Processed file: F(2).csv, Records Saved: 20098, Duplicate Records: 915
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py G(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:03:58.607025 Start FindDupsCSV Ver. 1
+Reading: G(2).csv, Writing: G(3).csv
+
+2019-02-20 18:04:38.467095 Finished in 0:00:39.860070, Processed file: G(2).csv, Records Saved: 22520, Duplicate Records: 952
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py H(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:04:38.685496 Start FindDupsCSV Ver. 1
+Reading: H(2).csv, Writing: H(3).csv
+
+2019-02-20 18:05:02.041737 Finished in 0:00:23.356241, Processed file: H(2).csv, Records Saved: 18038, Duplicate Records: 616
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py I(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:05:02.338137 Start FindDupsCSV Ver. 1
+Reading: I(2).csv, Writing: I(3).csv
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py J(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:05:02.572138 Start FindDupsCSV Ver. 1
+Reading: J(2).csv, Writing: J(3).csv
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py K(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:05:02.728138 Start FindDupsCSV Ver. 1
+Reading: K(2).csv, Writing: K(3).csv
+
+2019-02-20 18:05:40.123404 Finished in 0:00:37.395266, Processed file: K(2).csv, Records Saved: 21651, Duplicate Records: 975
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py L(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:05:40.388604 Start FindDupsCSV Ver. 1
+Reading: L(2).csv, Writing: L(3).csv
+
+2019-02-20 18:06:43.085114 Finished in 0:01:02.696510, Processed file: L(2).csv, Records Saved: 27344, Duplicate Records: 1197
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py M(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:06:43.334715 Start FindDupsCSV Ver. 1
+Reading: M(2).csv, Writing: M(3).csv
+
+2019-02-20 18:07:52.074436 Finished in 0:01:08.739721, Processed file: M(2).csv, Records Saved: 29313, Duplicate Records: 1213
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py N(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:07:52.339636 Start FindDupsCSV Ver. 1
+Reading: N(2).csv, Writing: N(3).csv
+
+2019-02-20 18:08:20.778486 Finished in 0:00:28.438850, Processed file: N(2).csv, Records Saved: 19230, Duplicate Records: 947
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py O(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:08:20.996887 Start FindDupsCSV Ver. 1
+Reading: O(2).csv, Writing: O(3).csv
+
+2019-02-20 18:08:26.378896 Finished in 0:00:05.382009, Processed file: O(2).csv, Records Saved: 9032, Duplicate Records: 385
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py P(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:08:26.566097 Start FindDupsCSV Ver. 1
+Reading: P(2).csv, Writing: P(3).csv
+
+2019-02-20 18:09:20.075591 Finished in 0:00:53.509494, Processed file: P(2).csv, Records Saved: 25600, Duplicate Records: 1186
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py Q(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:09:20.278392 Start FindDupsCSV Ver. 1
+Reading: Q(2).csv, Writing: Q(3).csv
+
+2019-02-20 18:09:20.793193 Finished in 0:00:00.514801, Processed file: Q(2).csv, Records Saved: 1568, Duplicate Records: 59
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py R(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:09:20.995993 Start FindDupsCSV Ver. 1
+Reading: R(2).csv, Writing: R(3).csv
+
+2019-02-20 18:10:26.074708 Finished in 0:01:05.078715, Processed file: R(2).csv, Records Saved: 28675, Duplicate Records: 1112
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py S(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:10:26.371109 Start FindDupsCSV Ver. 1
+Reading: S(2).csv, Writing: S(3).csv
+
+2019-02-20 18:11:40.845040 Finished in 0:01:14.473931, Processed file: S(2).csv, Records Saved: 30788, Duplicate Records: 1133
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py T(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:11:41.094641 Start FindDupsCSV Ver. 1
+Reading: T(2).csv, Writing: T(3).csv
+
+2019-02-20 18:11:43.887045 Finished in 0:00:02.792404, Processed file: T(2).csv, Records Saved: 6242, Duplicate Records: 245
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py U(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:11:44.058646 Start FindDupsCSV Ver. 1
+Reading: U(2).csv, Writing: U(3).csv
+
+2019-02-20 18:11:45.571848 Finished in 0:00:01.513202, Processed file: U(2).csv, Records Saved: 4658, Duplicate Records: 192
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py V(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:11:45.759049 Start FindDupsCSV Ver. 1
+Reading: V(2).csv, Writing: V(3).csv
+
+2019-02-20 18:11:50.095856 Finished in 0:00:04.336807, Processed file: V(2).csv, Records Saved: 8205, Duplicate Records: 256
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py W(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:11:50.267457 Start FindDupsCSV Ver. 1
+Reading: W(2).csv, Writing: W(3).csv
+
+2019-02-20 18:12:08.646289 Finished in 0:00:18.378832, Processed file: W(2).csv, Records Saved: 15345, Duplicate Records: 496
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py X(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:12:08.880289 Start FindDupsCSV Ver. 1
+Reading: X(2).csv, Writing: X(3).csv
+
+2019-02-20 18:12:09.613491 Finished in 0:00:00.733202, Processed file: X(2).csv, Records Saved: 2023, Duplicate Records: 110
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py Y(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:12:09.816291 Start FindDupsCSV Ver. 1
+Reading: Y(2).csv, Writing: Y(3).csv
+
+2019-02-20 18:12:11.828695 Finished in 0:00:02.012404, Processed file: Y(2).csv, Records Saved: 4935, Duplicate Records: 238
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py Z(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:12:12.000295 Start FindDupsCSV Ver. 1
+Reading: Z(2).csv, Writing: Z(3).csv
+
+2019-02-20 18:12:12.671096 Finished in 0:00:00.670801, Processed file: Z(2).csv, Records Saved: 2495, Duplicate Records: 81
+
+(base) E:\FindDupsCSV>python FindDupsCSV.py NUMBERS(2).csv 
+Press Ctrl+C to exit
+2019-02-20 18:12:12.905097 Start FindDupsCSV Ver. 1
+Reading: NUMBERS(2).csv, Writing: NUMBERS(3).csv
+
+2019-02-20 18:12:14.324699 Finished in 0:00:01.419602, Processed file: NUMBERS(2).csv, Records Saved: 3820, Duplicate Records: 187
