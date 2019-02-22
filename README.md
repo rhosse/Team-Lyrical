@@ -29,7 +29,7 @@ NOTE: Before running script, install langdetect using pip:
 
 FindDupsCSV: Review the input CSV music files processed by CleanCSV and 
              perform the following tasks:
-1. Read in cleaned (2) file row-by-row into a list
+1. Read in cleaned (2) files row-by-row into a list.
 2. Call FindDup to check for duplicate lyrics AND matching group names. 
    If found return True, otherwise return False.
 3. IF True returned, write row list to DupCSVList
@@ -39,9 +39,7 @@ FindDupsCSV: Review the input CSV music files processed by CleanCSV and
 6. Write duplicate rows in DupCSVList to <inputfilename>(3-Dups).csv
 7. Output record counts saved and duplicated to the console
 
-CalcCSVTotals: Generate the following statistics using the metadata associated 
-               with each lyric record for all cleaned CSV files A(2).csv to 
-               Z(2).csv and Numbers(20).csv.
+CalcCSVTotals: Generate the following statistics using the metadata associated with each lyric record read from file from file InputCSVs.txt for all cleaned CSV files A(2).csv to Z(2).csv and Numbers(20).csv.
 SongYearDict contains the number of songs for each year.
 artistDict contains the number of songs by artist.
 genreDict contains the number of songs by genre.
