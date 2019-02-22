@@ -42,8 +42,8 @@ FindDupsCSV: Review the input CSV music files processed by CleanCSV and
 CalcCSVTotals: Generate the following statistics using the metadata associated 
                with each lyric record for all cleaned CSV files A(2).csv to 
                Z(2).csv and Numbers(20).csv.
-SongYearDict contains the number of songs for each year 
-artistDict contains the number of songs by artist
-genreDict contains the number of songs by genre
+SongYearDict contains the number of songs for each year.
+artistDict contains the number of songs by artist.
+genreDict contains the number of songs by genre.
 Note: Prototype version to be used in the Spyder IDE to access and display the
 the following dictionaries. Have not yet generated useful console or file output.
