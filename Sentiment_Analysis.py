@@ -9,14 +9,59 @@ Sentiment analysis prototype initialy using A(4).csv
 # Import needed libraries
 import numpy as np
 import pandas as pd
-#import matplotlib.pyplot as plt
 import matplotlib as plt
-#%matplotlib inline
 import seaborn as sns
 from textblob import TextBlob, Word
 import signal
 import sys
 from nltk.corpus import stopwords
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+new_words = {
+    'dont':	-0.02,
+    'nigga': -0.8,
+    'time':	0.3,
+    'aint':	-0.5,
+    'make':	0.2,
+    'come':	0.2,
+    'cause': 0.1,
+    'baby':	0.6,
+    'never': -0.5,
+    'cant':	-0.6,
+    'take':	0.1,
+    'girl':	0.4,
+    'life':	0.3,
+    'feel':	0.3,
+    'need':	0.2,
+    'right': 0.3,
+    'away':	0.2,
+    'give':	0.2,
+    'think': 0.1,
+    'wont':	-0.5,
+    'money': 0.1,
+    'gotta': 0.2,
+    'look':	0.3,
+    'night': -0.2,
+    'world': 0.3,
+    'heart': 0.6,
+    'around': 0.2,
+    'chorus': 0.3,
+    'mind':	0.3,
+    'little': -0.4,
+    'stop':	-0.2,
+    'better': 0.5,
+    'always': 0.2,
+    'live':	0.3,
+    'game':	0.2,
+    'nothing': -0.3,
+    'face':	0.3,
+    'hear':	0.2,
+    'show':	0.2,
+    'niggaz': -0.7,
+    'young': 0.4,
+    'high':	0.4,
+    'heart': 0.6,
+}
 
 class GracefulKiller:
   kill_now = False
@@ -61,6 +106,25 @@ def Create_Dict_Total(df, inputkey):
             
     return local_dict
 
+def Create_Dict_Total_with_Genre(df, inputkey):
+    ''' Same as Create_Dict_Total plus the genre added to the key '''    
+    local_dict = {}  # Count positive, negative by genre
+    for row in df.iterrows():
+        key = str(row[1][inputkey]) + ',' + str(row[1]['Genre']) + ',' + \
+            str(row[1]['VADERSentiment'])
+        if key in local_dict:
+            local_dict[key] += 1
+        else:
+            local_dict[key] = 1
+        key = str(row[1][inputkey]) + ',' + str(row[1]['Genre']) + ',' + \
+            str(row[1]['BLOBSentiment'])
+        if key in local_dict:
+            local_dict[key] += 1
+        else:
+            local_dict[key] = 1
+            
+    return local_dict
+    
 def Create_Ratings_Dict_Total(df, inputkey):
 
     local_dict = {}  # Count positive, negative by genre
@@ -102,8 +166,6 @@ def Write_To_CSV(total_dict, suffix, outputfilename):
                 continue
 
 def Generate_Sentiment_Scores(df):
-    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-    analyzer = SentimentIntensityAnalyzer()
 
     emptyline = []
     for row in df['Lyrics']:
@@ -111,6 +173,14 @@ def Generate_Sentiment_Scores(df):
         blob = TextBlob(row)        
         vs['polarity'] = blob.polarity
         vs['subjectivity'] = blob.subjectivity
+        
+        if vs['pos'] - vs['neg'] > 0.05:
+            vs['VADERSentiment'] = 'VADER_Positive'
+        elif vs['pos'] - vs['neg'] <= -0.05:
+            vs['VADERSentiment'] = 'VADER_Negative'
+        else:
+            vs['VADERSentiment'] = 'VADER_Neutral'
+            
         emptyline.append(vs)
         if killer.kill_now == True:
             print("exit_state TRUE")
@@ -121,6 +191,7 @@ def Generate_Sentiment_Scores(df):
     df = pd.concat([df.reset_index(drop=True), df_sentiments], axis=1)
     # Convert scores into positive, negative sentimes using threshold 0.0 
     df['VADERSentiment'] = np.where(df['compound'] >= 0, 'VADER_Positive', 'VADER_Negative')
+    
     # Convert scores into positive, negative sentimes using threshold 0.0 
     df['BLOBSentiment'] = np.where(df['polarity'] >= 0, 'BLOB_Positive', 'BLOB_Negative')
 
@@ -150,6 +221,9 @@ if __name__ == '__main__':
         cp = sns.color_palette()        
         df_total = pd.DataFrame()
 
+        analyzer = SentimentIntensityAnalyzer() # Define globally so can update lexicon
+        analyzer.lexicon.update(new_words)
+
         for inputCSV_file in inputCSV_list:
             inputCSV_file = inputCSV_file.strip()
             if len(inputCSV_file) == 0:
@@ -162,11 +236,14 @@ if __name__ == '__main__':
             df = preprocess(df)
             df_total = df_total.append(Generate_Sentiment_Scores(df), ignore_index=True)
     
-        total_dict = Create_Dict_Total(df_total, 'Year')
-        Write_To_CSV(total_dict, '_Year', output_filename)
+        #total_dict = Create_Dict_Total(df_total, 'Year')
+        #Write_To_CSV(total_dict, '_Year', output_filename)
 
         #total_dict = Create_Dict_Total(df_total, 'Genre')
         #Write_To_CSV(total_dict, '_Genre', output_filename)
+        
+        total_dict = Create_Dict_Total_with_Genre(df_total, 'Artist')
+        Write_To_CSV(total_dict, '_Artist_plus_Genre', output_filename)
 
         #total_dict = Create_Dict_Total(df_total, 'Artist')
         #Write_To_CSV(total_dict, '_Artist', output_filename)
