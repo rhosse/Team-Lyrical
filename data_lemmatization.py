@@ -1,7 +1,11 @@
 '''
-
-Data lemmatization generator.
-
+data_lemmatization.py
+Data lemmatization generator
+keeps only noun, adj, verb, adverb
+1.  read in Data.csv
+2.  tokenize using gensim
+3.  run function to lemmatize using SpaCy
+4.  send lemmatization to output for input to topic modeling code (e.g., Script_TM_30.py)
 '''
 import numpy as np
 import pandas as pd
