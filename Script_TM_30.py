@@ -1,3 +1,12 @@
+'''
+Lyrical Team -- May 2019 -- George Mason University
+Script_TM_30.py
+1.  import packages
+2.  read in data from Data.csv
+3.  get lemmatized output from data_lemmatized.py created output (saves time on runs since only need to lemmatize once)
+4.  run LDA (can run gridsearch)
+5.  output topic keywords to csv 
+'''
 import time
 ta = time.time()
 
