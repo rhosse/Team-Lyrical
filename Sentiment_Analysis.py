@@ -1,7 +1,23 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Mar  2 20:02:08 2019
-Sentiment analysis prototype initialy using A(4).csv
+Perform VADER and TextBlob sentiment analysis on lyric records from 
+both LyricsWiki and MetroLyrics web sites based on input files by 
+performing the following processing steps:
+1. Read in cleaned files specified by inputCSVs.txt command line 
+   parameter
+2. Initialize VADER Sentiment Analysis object and supplement default 
+   lexicon with those most popular lyric words (not present in the 
+   lexicon) generated in another application using the NLTK package 
+   FreqDist algorithm.
+3. Preprocess by ensuring all lyrics lowercase, stop words and 
+   punctuation removed, and perform lemmatization operation.
+4. Generate VADER and Textblob sentiment scores for each lyric record 
+   and store in a dictionary to count positive, negative songs by artist, 
+   year, genre, band or song popularity, plus strings ‘VADERSentiment’ and 
+   ‘BLOBSentiment’.
+5. Write dictionary contents to specified outputfilename command line 
+   parameter 
 
 @author: Paul.Devine
 """
@@ -242,8 +258,11 @@ if __name__ == '__main__':
         #total_dict = Create_Dict_Total(df_total, 'Genre')
         #Write_To_CSV(total_dict, '_Genre', output_filename)
         
-        total_dict = Create_Dict_Total_with_Genre(df_total, 'Artist')
-        Write_To_CSV(total_dict, '_Artist_plus_Genre', output_filename)
+        #total_dict = Create_Dict_Total_with_Genre(df_total, 'Artist')
+        #Write_To_CSV(total_dict, '_Artist_plus_Genre', output_filename)
+
+        total_dict = Create_Dict_Total_with_Genre(df_total, 'Year')
+        Write_To_CSV(total_dict, '_Year_plus_Genre', output_filename)
 
         #total_dict = Create_Dict_Total(df_total, 'Artist')
         #Write_To_CSV(total_dict, '_Artist', output_filename)
