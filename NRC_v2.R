@@ -1,3 +1,11 @@
+#This code is desined to take the output from the LDA topic analysis and apply the NRC sentiment and emotion lexicon to the words in each topic.
+#After reading in the csv file, punctuation and non-alpha-numeric characters are removed
+#The remaining words are then fed into the get_nrc_sentiment function from the suyzhet library, which returns a dictionary of word totals for each emotion/sentiment
+#The remaining code curates the data in a form suitable for export to a csv file
+#The output of the csv file has the following data structure: the rows correspond to topics and the columns correspond to emotion/sentiment. The values stored are the word counts for each emotion/sentiment per topic.
+
+
+
 library(tm)
 library(ggplot2)
 library(syuzhet)
