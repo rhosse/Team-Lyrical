@@ -13,7 +13,7 @@ library(ggplot2)
 library(dplyr)
 
 # Set working directory to where the output file is located
-setwd("C:/Users/G51278/Documents/TASC and Engility Internal/GMU Data Analytics/Course Documents/10 DAEN 690/Code")
+setwd("WORKING DIRECTORY")
 
 # Read CSV file
 wordsAndScores = read.csv("AllRecords_PeriodTFIDF_LyricWikia_Top10.csv")
